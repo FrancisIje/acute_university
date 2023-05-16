@@ -1,7 +1,10 @@
+import "package:acute_university/Global/theme.dart";
+import "package:acute_university/Login/view/login_screen.dart";
 import "package:flutter/material.dart";
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main(){
-  runApp(MyApp());
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -9,9 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.from(colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF004ADD))), 
-
+    return ScreenUtilInit(
+      minTextAdapt: true,
+      splitScreenMode: true,
+      designSize: const Size(414, 896),
+      builder: (BuildContext context, child) => MaterialApp(
+        theme: appTheme,
+        home: const LoginScreen(),
+      ),
     );
   }
 }
