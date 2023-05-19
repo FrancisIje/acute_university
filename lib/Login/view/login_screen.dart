@@ -93,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(width: 5.w,),
                     InkWell(
                       onTap: () {
-                        // Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  SignUpScreen,));
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  SignUpScreen(),));
                       },
                       child: Text(
                         "Sign Up",
